@@ -23,24 +23,26 @@
         ]);
       };
 
-      const App = () => {
-        return React.createElement("div", {}, [
-          React.createElement("h1", {}, "React Is Rendered!!!"),
-          //   <Person name="Eslam Sobhi" job="Web Developer"/>
-          React.createElement(Person, {
-            name: "Eslam Sobhi",
-            job: "Web Developer",
-          }),
-          React.createElement(Person, {
-            name: "Abdelrahman Akl",
-            job: "Accountant",
-          }),
-          React.createElement(Person, {
-            name: "Ahmed Medo",
-            job: "Graphic Designer",
-          }),
-        ]);
-      };
+      class App extends React.Component {
+        render() {
+          return React.createElement("div", {}, [
+            React.createElement("h1", {}, "React Is Rendered!!!"),
+            //   <Person name="Eslam Sobhi" job="Web Developer"/>
+            React.createElement(Person, {
+              name: "Eslam Sobhi",
+              job: "Web Developer",
+            }),
+            React.createElement(Person, {
+              name: "Abdelrahman Akl",
+              job: "Accountant",
+            }),
+            React.createElement(Person, {
+              name: "Ahmed Medo",
+              job: "Graphic Designer",
+            }),
+          ]);
+        }
+      }
 
       ReactDOM.render(
         React.createElement(App),
