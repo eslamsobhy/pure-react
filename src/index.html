@@ -18,27 +18,30 @@
     <script>
       const Person = (props) => {
         return React.createElement("div", {}, [
-          React.createElement("h1", {}, props.name),
-          React.createElement("p", {}, props.job),
+          React.createElement("h1", { key: "person0" }, props.name),
+          React.createElement("p", { key: "person1" }, props.job),
         ]);
       };
 
       class App extends React.Component {
         render() {
           return React.createElement("div", {}, [
-            React.createElement("h1", {}, "React Is Rendered!!!"),
+            React.createElement("h1", { key: 3 }, "React Is Rendered!!!"),
             //   <Person name="Eslam Sobhi" job="Web Developer"/>
             React.createElement(Person, {
               name: "Eslam Sobhi",
               job: "Web Developer",
+              key: 0,
             }),
             React.createElement(Person, {
               name: "Abdelrahman Akl",
               job: "Accountant",
+              key: 1,
             }),
             React.createElement(Person, {
               name: "Ahmed Medo",
               job: "Graphic Designer",
+              key: 2,
             }),
           ]);
         }
